@@ -23,7 +23,8 @@ def health():
 def version():
     if request.method == 'GET':
         return jsonify({'model_version': _version,
-                        'api_version': api_version})
+                        'api_version': api_version,
+                        'author': 'hunglm'})
 
 
 @prediction_app.route('/v1/predict/regression', methods=['POST'])
